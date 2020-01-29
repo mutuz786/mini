@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Magnitude 8.0</title>
+</head>
+<style>
+body {
+  background: url(1.jpg);
+  background-repeat: no-repeat;
+  background-size: 1150px 680px;
+}
+form {
+  margin:0 auto;
+  width:300px
+}
+input {
+  margin-bottom:3px;
+  padding:10px;
+  width: 100%;
+  border:1px solid #CCC
+}
+label {
+  cursor:pointer
+}
+#form-switch {
+  display:none
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}
+
+.button1{
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-540px;
+  right: -1000px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.button1:hover {
+  opacity: 1;
+}
+.button2{
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+.button2:hover {
+  opacity: 1;
+}
+</style>
+
+<script src="form.js"></script>
+
+
+<body>
+<a href="home.html" class="button1" >BACK</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form id='login-form' action="" align="middle" method='post'>
+  <input type="text" name="username" id="username" placeholder="Username" required>
+  <input type="password" name="password" id="password" placeholder="Password" required>
+  <input type="button" class="button2" value="LOGIN" id="submit" onclick="validate()"/>
+</form>
+</body>
+</html>

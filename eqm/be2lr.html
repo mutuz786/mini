@@ -1,0 +1,118 @@
+<html>
+<head>
+<title>Magnitude 8.0</title>
+<script>
+var timeleft = 8;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft-1;
+  timeleft -= 1;
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "0"
+    window.location = "lrl.html";
+  }
+}, 1000);
+</script>
+
+<style>
+body {
+  background: url(be2lr.gif);
+  background-repeat: no-repeat;
+  background-size: 1150px 680px;
+}
+.button1:hover {
+  opacity: 0.8;
+}
+.button2:hover {
+  opacity: 0.8;
+}
+.button3:hover {
+  opacity: 0.8;
+}
+
+@-webkit-keyframes FadeIntr{
+ 0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.button1 {
+  background-color: gray;
+  border: none;
+  border-radius:10px;
+  color:black;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-300px;
+  right:-1000px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-animation: FadeIntr 5s;
+  opacity: 0.5;
+}
+.button2 {
+  background-color: gray;
+  border: none;
+  border-radius:10px;
+  color:black;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-300px;
+  right:130px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-animation: FadeIntr 5s;
+  opacity: 0.5;
+}
+.cd{
+  -webkit-animation: FadeIntr 5s;
+}
+.button3 { 
+  height: 50px;
+  width: 200px;
+  background:gray;
+  border: none;
+  color:black;
+  padding: 15px 15px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-295px;
+  right: -448px;
+  border-radius:10px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-animation: FadeIntr 5s;
+  opacity: 0.5;
+}
+</style>
+</head>
+<body>
+<a style="text-decoration:none" href="lr2be.html" class="button1" >Go Right</a>
+<a style="text-decoration:none" href="lr2st.html" class="button2" >Go Left</a>
+<center>
+<font size="+6" id="countdown" class="cd"></font>
+</center>
+<a href="lrt.html" class="button3" ><center><p>Hide Inside The Table</p></center></a>
+<embed src="../bgm/earthquake.mp3" autostart="true" loop="true" hidden="true" class="audio">
+</body>
+</html> 

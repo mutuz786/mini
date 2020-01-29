@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Magnitude 8.0</title>
+<script>
+var timeleft = 8;
+var downloadTimer = setInterval(function(){
+  document.getElementById("countdown").innerHTML = timeleft-1  ;
+  timeleft -= 1;
+  if(timeleft <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("countdown").innerHTML = "0"
+    window.location = "bal.html";
+  }
+}, 1000);
+</script>
+
+<style>
+body {
+  background: url(be2ba.gif);
+  background-repeat: no-repeat;
+  background-size: 1150px 680px;
+}
+.button1:hover {
+  opacity: 0.8;
+}
+.button2:hover {
+  opacity: 0.8;
+}
+.button3:hover {
+  opacity: 0.8;
+}
+
+@-webkit-keyframes FadeIntr{
+ 0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.button1 {
+  background-color: gray;
+  border: none;
+  border-radius:10px;
+  color:black;
+  padding: 15px 32px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-300px;
+  right:-10px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-animation: FadeIntr 5s;
+  opacity: 0.5;
+}
+
+.button2 { 
+  height: 50px;
+  width: 200px;
+  border-radius:10px;
+  background:gray;
+  border: none;
+  color:black;
+  padding: 15px 15px;
+  align: center;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  bottom:-290px;
+  right: -710px;
+  border-radius:10px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-animation: FadeIntr 5s;
+  opacity: 0.5;
+}
+.cd{
+  -webkit-animation: FadeIntr 5s;
+}
+
+</style>
+</head>
+<body>
+<a style="text-decoration:none" href="ba2be.html" class="button1" >Go Left</a>
+<center>
+<font size="+6" id="countdown" class="cd"></font>
+</center>
+ <a href="bat.html" class="button2" ><p>Hide Behind The Tub</p></a>
+<embed src="../bgm/earthquake.mp3" autostart="true" loop="true" hidden="true" class="audio">
+</body>
+</html> 
